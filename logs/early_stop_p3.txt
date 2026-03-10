@@ -1,0 +1,243 @@
+Seed set to: 42
+Dataset: mnist  |  Model: mlp
+Using device: mps
+MLP(
+  (net): Sequential(
+    (0): Flatten(start_dim=1, end_dim=-1)
+    (1): Linear(in_features=784, out_features=512, bias=True)
+    (2): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): ReLU()
+    (4): Dropout(p=0.3, inplace=False)
+    (5): Linear(in_features=512, out_features=256, bias=True)
+    (6): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (7): ReLU()
+    (8): Dropout(p=0.3, inplace=False)
+    (9): Linear(in_features=256, out_features=10, bias=True)
+  )
+)
+
+Epoch 1/30
+  [100/938] loss: 0.5589  acc: 0.8430
+  [200/938] loss: 0.4185  acc: 0.8805
+  [300/938] loss: 0.3575  acc: 0.8969
+  [400/938] loss: 0.3200  acc: 0.9075
+  [500/938] loss: 0.2969  acc: 0.9133
+  [600/938] loss: 0.2787  acc: 0.9184
+  [700/938] loss: 0.2642  acc: 0.9223
+  [800/938] loss: 0.2527  acc: 0.9255
+  [900/938] loss: 0.2425  acc: 0.9284
+  Train loss: 0.2401  acc: 0.9289
+  Val   loss: 0.1000  acc: 0.9687
+  Saved best model (val_acc=0.9687)
+
+Epoch 2/30
+  [100/938] loss: 0.1316  acc: 0.9620
+  [200/938] loss: 0.1261  acc: 0.9630
+  [300/938] loss: 0.1300  acc: 0.9603
+  [400/938] loss: 0.1271  acc: 0.9611
+  [500/938] loss: 0.1294  acc: 0.9603
+  [600/938] loss: 0.1284  acc: 0.9605
+  [700/938] loss: 0.1283  acc: 0.9609
+  [800/938] loss: 0.1278  acc: 0.9610
+  [900/938] loss: 0.1270  acc: 0.9613
+  Train loss: 0.1263  acc: 0.9615
+  Val   loss: 0.0760  acc: 0.9770
+  Saved best model (val_acc=0.9770)
+
+Epoch 3/30
+  [100/938] loss: 0.0983  acc: 0.9691
+  [200/938] loss: 0.0987  acc: 0.9674
+  [300/938] loss: 0.0987  acc: 0.9672
+  [400/938] loss: 0.0956  acc: 0.9689
+  [500/938] loss: 0.0994  acc: 0.9679
+  [600/938] loss: 0.0998  acc: 0.9681
+  [700/938] loss: 0.0991  acc: 0.9684
+  [800/938] loss: 0.1005  acc: 0.9680
+  [900/938] loss: 0.1005  acc: 0.9684
+  Train loss: 0.1007  acc: 0.9684
+  Val   loss: 0.0698  acc: 0.9785
+  Saved best model (val_acc=0.9785)
+
+Epoch 4/30
+  [100/938] loss: 0.0869  acc: 0.9750
+  [200/938] loss: 0.0814  acc: 0.9756
+  [300/938] loss: 0.0809  acc: 0.9748
+  [400/938] loss: 0.0818  acc: 0.9744
+  [500/938] loss: 0.0837  acc: 0.9742
+  [600/938] loss: 0.0843  acc: 0.9737
+  [700/938] loss: 0.0849  acc: 0.9734
+  [800/938] loss: 0.0858  acc: 0.9733
+  [900/938] loss: 0.0862  acc: 0.9732
+  Train loss: 0.0863  acc: 0.9732
+  Val   loss: 0.0644  acc: 0.9799
+  Saved best model (val_acc=0.9799)
+
+Epoch 5/30
+  [100/938] loss: 0.0777  acc: 0.9748
+  [200/938] loss: 0.0752  acc: 0.9764
+  [300/938] loss: 0.0777  acc: 0.9750
+  [400/938] loss: 0.0798  acc: 0.9748
+  [500/938] loss: 0.0797  acc: 0.9750
+  [600/938] loss: 0.0793  acc: 0.9752
+  [700/938] loss: 0.0787  acc: 0.9754
+  [800/938] loss: 0.0794  acc: 0.9753
+  [900/938] loss: 0.0793  acc: 0.9754
+  Train loss: 0.0792  acc: 0.9752
+  Val   loss: 0.0591  acc: 0.9811
+  Saved best model (val_acc=0.9811)
+
+Epoch 6/30
+  [100/938] loss: 0.0587  acc: 0.9816
+  [200/938] loss: 0.0588  acc: 0.9818
+  [300/938] loss: 0.0567  acc: 0.9821
+  [400/938] loss: 0.0558  acc: 0.9821
+  [500/938] loss: 0.0554  acc: 0.9821
+  [600/938] loss: 0.0550  acc: 0.9822
+  [700/938] loss: 0.0549  acc: 0.9823
+  [800/938] loss: 0.0544  acc: 0.9823
+  [900/938] loss: 0.0537  acc: 0.9827
+  Train loss: 0.0540  acc: 0.9827
+  Val   loss: 0.0526  acc: 0.9824
+  Saved best model (val_acc=0.9824)
+
+Epoch 7/30
+  [100/938] loss: 0.0427  acc: 0.9861
+  [200/938] loss: 0.0426  acc: 0.9857
+  [300/938] loss: 0.0441  acc: 0.9854
+  [400/938] loss: 0.0439  acc: 0.9853
+  [500/938] loss: 0.0452  acc: 0.9849
+  [600/938] loss: 0.0449  acc: 0.9852
+  [700/938] loss: 0.0451  acc: 0.9852
+  [800/938] loss: 0.0466  acc: 0.9847
+  [900/938] loss: 0.0470  acc: 0.9847
+  Train loss: 0.0475  acc: 0.9846
+  Val   loss: 0.0532  acc: 0.9833
+  Saved best model (val_acc=0.9833)
+
+Epoch 8/30
+  [100/938] loss: 0.0436  acc: 0.9853
+  [200/938] loss: 0.0412  acc: 0.9860
+  [300/938] loss: 0.0415  acc: 0.9867
+  [400/938] loss: 0.0403  acc: 0.9873
+  [500/938] loss: 0.0396  acc: 0.9875
+  [600/938] loss: 0.0406  acc: 0.9872
+  [700/938] loss: 0.0412  acc: 0.9870
+  [800/938] loss: 0.0428  acc: 0.9863
+  [900/938] loss: 0.0438  acc: 0.9861
+  Train loss: 0.0441  acc: 0.9860
+  Val   loss: 0.0480  acc: 0.9836
+  Saved best model (val_acc=0.9836)
+
+Epoch 9/30
+  [100/938] loss: 0.0365  acc: 0.9895
+  [200/938] loss: 0.0372  acc: 0.9880
+  [300/938] loss: 0.0391  acc: 0.9872
+  [400/938] loss: 0.0391  acc: 0.9870
+  [500/938] loss: 0.0394  acc: 0.9870
+  [600/938] loss: 0.0400  acc: 0.9872
+  [700/938] loss: 0.0415  acc: 0.9864
+  [800/938] loss: 0.0421  acc: 0.9859
+  [900/938] loss: 0.0425  acc: 0.9859
+  Train loss: 0.0422  acc: 0.9860
+  Val   loss: 0.0513  acc: 0.9843
+  Saved best model (val_acc=0.9843)
+
+Epoch 10/30
+  [100/938] loss: 0.0422  acc: 0.9864
+  [200/938] loss: 0.0409  acc: 0.9870
+  [300/938] loss: 0.0401  acc: 0.9869
+  [400/938] loss: 0.0391  acc: 0.9876
+  [500/938] loss: 0.0390  acc: 0.9876
+  [600/938] loss: 0.0393  acc: 0.9874
+  [700/938] loss: 0.0394  acc: 0.9875
+  [800/938] loss: 0.0393  acc: 0.9873
+  [900/938] loss: 0.0410  acc: 0.9867
+  Train loss: 0.0416  acc: 0.9865
+  Val   loss: 0.0522  acc: 0.9832
+
+Epoch 11/30
+  [100/938] loss: 0.0352  acc: 0.9894
+  [200/938] loss: 0.0328  acc: 0.9900
+  [300/938] loss: 0.0316  acc: 0.9905
+  [400/938] loss: 0.0320  acc: 0.9900
+  [500/938] loss: 0.0311  acc: 0.9903
+  [600/938] loss: 0.0321  acc: 0.9900
+  [700/938] loss: 0.0320  acc: 0.9900
+  [800/938] loss: 0.0319  acc: 0.9899
+  [900/938] loss: 0.0317  acc: 0.9899
+  Train loss: 0.0314  acc: 0.9901
+  Val   loss: 0.0458  acc: 0.9852
+  Saved best model (val_acc=0.9852)
+
+Epoch 12/30
+  [100/938] loss: 0.0224  acc: 0.9936
+  [200/938] loss: 0.0222  acc: 0.9934
+  [300/938] loss: 0.0238  acc: 0.9928
+  [400/938] loss: 0.0247  acc: 0.9922
+  [500/938] loss: 0.0249  acc: 0.9923
+  [600/938] loss: 0.0259  acc: 0.9919
+  [700/938] loss: 0.0259  acc: 0.9917
+  [800/938] loss: 0.0265  acc: 0.9914
+  [900/938] loss: 0.0264  acc: 0.9915
+  Train loss: 0.0264  acc: 0.9915
+  Val   loss: 0.0460  acc: 0.9848
+
+Epoch 13/30
+  [100/938] loss: 0.0254  acc: 0.9931
+  [200/938] loss: 0.0263  acc: 0.9927
+  [300/938] loss: 0.0260  acc: 0.9926
+  [400/938] loss: 0.0253  acc: 0.9929
+  [500/938] loss: 0.0255  acc: 0.9927
+  [600/938] loss: 0.0254  acc: 0.9925
+  [700/938] loss: 0.0253  acc: 0.9925
+  [800/938] loss: 0.0252  acc: 0.9924
+  [900/938] loss: 0.0253  acc: 0.9923
+  Train loss: 0.0251  acc: 0.9924
+  Val   loss: 0.0456  acc: 0.9854
+  Saved best model (val_acc=0.9854)
+
+Epoch 14/30
+  [100/938] loss: 0.0253  acc: 0.9923
+  [200/938] loss: 0.0241  acc: 0.9920
+  [300/938] loss: 0.0223  acc: 0.9926
+  [400/938] loss: 0.0227  acc: 0.9922
+  [500/938] loss: 0.0230  acc: 0.9922
+  [600/938] loss: 0.0231  acc: 0.9922
+  [700/938] loss: 0.0233  acc: 0.9922
+  [800/938] loss: 0.0229  acc: 0.9925
+  [900/938] loss: 0.0234  acc: 0.9924
+  Train loss: 0.0236  acc: 0.9923
+  Val   loss: 0.0434  acc: 0.9860
+  Saved best model (val_acc=0.9860)
+
+Epoch 15/30
+  [100/938] loss: 0.0205  acc: 0.9934
+  [200/938] loss: 0.0192  acc: 0.9932
+  [300/938] loss: 0.0201  acc: 0.9932
+  [400/938] loss: 0.0216  acc: 0.9927
+  [500/938] loss: 0.0211  acc: 0.9931
+  [600/938] loss: 0.0212  acc: 0.9928
+  [700/938] loss: 0.0212  acc: 0.9929
+  [800/938] loss: 0.0215  acc: 0.9929
+  [900/938] loss: 0.0222  acc: 0.9927
+  Train loss: 0.0222  acc: 0.9927
+  Val   loss: 0.0475  acc: 0.9854
+
+Epoch 16/30
+  [100/938] loss: 0.0178  acc: 0.9952
+  [200/938] loss: 0.0187  acc: 0.9945
+  [300/938] loss: 0.0195  acc: 0.9940
+  [400/938] loss: 0.0201  acc: 0.9938
+  [500/938] loss: 0.0196  acc: 0.9940
+  [600/938] loss: 0.0195  acc: 0.9940
+  [700/938] loss: 0.0193  acc: 0.9940
+  [800/938] loss: 0.0193  acc: 0.9940
+  [900/938] loss: 0.0201  acc: 0.9937
+  Train loss: 0.0199  acc: 0.9938
+  Val   loss: 0.0433  acc: 0.9858
+
+Epoch 17/30
+Command: python main.py --dataset mnist --model mlp --epochs 15 --early_stop_patience 3 --epochs 30
+==================================================
+/opt/miniconda3/envs/DeepLearning/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 14 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
