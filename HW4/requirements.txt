@@ -1,0 +1,8 @@
+# Intel-Mac note: the last PyTorch build with x86 macOS wheels is 2.2.2,
+# which was compiled against NumPy 1.x. NumPy 2 is therefore pinned out
+# to avoid the "Numpy is not available" ABI crash. These bounds also work
+# fine on Linux / Apple-Silicon / Windows.
+torch>=2.0,<2.3
+numpy>=1.24,<2
+pandas>=2.0,<2.3
+yfinance>=0.2.40

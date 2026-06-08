@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Training artifacts
+checkpoints/
+*.pth
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# LaTeX build artifacts
+report/*.aux
+report/*.log
+report/*.out
+report/*.fls
+report/*.fdb_latexmk
+report/*.synctex.gz

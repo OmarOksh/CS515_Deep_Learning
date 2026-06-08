@@ -1,0 +1,825 @@
+HW4 full run — Sun Jun  7 12:17:21 +03 2026
+device=cpu  part2_steps=6000  sweep_steps=2000
+logging to: results_20260607_121721.log
+
+============================================================
+>>> Part 1b | returns | LSTM
+============================================================
+Task: returns | Model: lstm | Device: cpu
+[data] train:   3372 windows
+[data] val  :    246 windows
+[data] test :    675 windows
+StockLSTM(
+  (lstm): LSTM(5, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=64, out_features=5, bias=True)
+)
+    [50/53] loss: 0.002618
+Epoch   1/50 | train 0.002544 | val 0.000640  <- saved
+    [50/53] loss: 0.001255
+Epoch   2/50 | train 0.001248 | val 0.000655
+    [50/53] loss: 0.001184
+Epoch   3/50 | train 0.001178 | val 0.000640  <- saved
+    [50/53] loss: 0.001146
+Epoch   4/50 | train 0.001153 | val 0.000644
+    [50/53] loss: 0.001140
+Epoch   5/50 | train 0.001133 | val 0.000629  <- saved
+    [50/53] loss: 0.001112
+Epoch   6/50 | train 0.001115 | val 0.000622  <- saved
+    [50/53] loss: 0.001106
+Epoch   7/50 | train 0.001112 | val 0.000640
+    [50/53] loss: 0.001082
+Epoch   8/50 | train 0.001089 | val 0.000634
+    [50/53] loss: 0.001088
+Epoch   9/50 | train 0.001087 | val 0.000644
+    [50/53] loss: 0.001073
+Epoch  10/50 | train 0.001081 | val 0.000624
+    [50/53] loss: 0.001083
+Epoch  11/50 | train 0.001082 | val 0.000641
+    [50/53] loss: 0.001057
+Epoch  12/50 | train 0.001075 | val 0.000636
+    [50/53] loss: 0.001062
+Epoch  13/50 | train 0.001066 | val 0.000630
+    [50/53] loss: 0.001071
+Epoch  14/50 | train 0.001064 | val 0.000623
+    [50/53] loss: 0.001061
+Epoch  15/50 | train 0.001062 | val 0.000624
+    [50/53] loss: 0.001061
+Epoch  16/50 | train 0.001062 | val 0.000632
+    [50/53] loss: 0.001053
+Epoch  17/50 | train 0.001058 | val 0.000629
+    [50/53] loss: 0.001047
+Epoch  18/50 | train 0.001056 | val 0.000624
+    [50/53] loss: 0.001046
+Epoch  19/50 | train 0.001055 | val 0.000625
+    [50/53] loss: 0.001053
+Epoch  20/50 | train 0.001054 | val 0.000626
+    [50/53] loss: 0.001052
+Epoch  21/50 | train 0.001058 | val 0.000629
+    [50/53] loss: 0.001053
+Epoch  22/50 | train 0.001053 | val 0.000620  <- saved
+    [50/53] loss: 0.001054
+Epoch  23/50 | train 0.001054 | val 0.000629
+    [50/53] loss: 0.001060
+Epoch  24/50 | train 0.001053 | val 0.000630
+    [50/53] loss: 0.001035
+Epoch  25/50 | train 0.001049 | val 0.000621
+    [50/53] loss: 0.001051
+Epoch  26/50 | train 0.001053 | val 0.000624
+    [50/53] loss: 0.001049
+Epoch  27/50 | train 0.001052 | val 0.000625
+    [50/53] loss: 0.001052
+Epoch  28/50 | train 0.001051 | val 0.000623
+    [50/53] loss: 0.001044
+Epoch  29/50 | train 0.001050 | val 0.000627
+    [50/53] loss: 0.001052
+Epoch  30/50 | train 0.001049 | val 0.000626
+    [50/53] loss: 0.001053
+Epoch  31/50 | train 0.001050 | val 0.000626
+    [50/53] loss: 0.001055
+Epoch  32/50 | train 0.001052 | val 0.000627
+    [50/53] loss: 0.001049
+Epoch  33/50 | train 0.001051 | val 0.000625
+    [50/53] loss: 0.001058
+Epoch  34/50 | train 0.001052 | val 0.000626
+    [50/53] loss: 0.001051
+Epoch  35/50 | train 0.001049 | val 0.000626
+    [50/53] loss: 0.001053
+Epoch  36/50 | train 0.001050 | val 0.000627
+    [50/53] loss: 0.001048
+Epoch  37/50 | train 0.001050 | val 0.000627
+    [50/53] loss: 0.001047
+Epoch  38/50 | train 0.001046 | val 0.000625
+    [50/53] loss: 0.001045
+Epoch  39/50 | train 0.001048 | val 0.000625
+    [50/53] loss: 0.001035
+Epoch  40/50 | train 0.001050 | val 0.000626
+    [50/53] loss: 0.001055
+Epoch  41/50 | train 0.001047 | val 0.000625
+    [50/53] loss: 0.001047
+Epoch  42/50 | train 0.001049 | val 0.000626
+    [50/53] loss: 0.001048
+Epoch  43/50 | train 0.001048 | val 0.000626
+    [50/53] loss: 0.001046
+Epoch  44/50 | train 0.001048 | val 0.000626
+    [50/53] loss: 0.001049
+Epoch  45/50 | train 0.001047 | val 0.000626
+    [50/53] loss: 0.001049
+Epoch  46/50 | train 0.001046 | val 0.000625
+    [50/53] loss: 0.001054
+Epoch  47/50 | train 0.001048 | val 0.000625
+    [50/53] loss: 0.001038
+Epoch  48/50 | train 0.001049 | val 0.000625
+    [50/53] loss: 0.001046
+Epoch  49/50 | train 0.001050 | val 0.000626
+    [50/53] loss: 0.001052
+Epoch  50/50 | train 0.001048 | val 0.000626
+
+Training complete. Best validation loss: 0.000620
+
+=== Test Results ===
+  task           : returns
+  overall MSE    : 1.098714e-03
+  overall MAE    : 2.273033e-02
+  MSE horizon d=1: 3.624129e-04
+  MSE horizon d=2: 7.102641e-04
+  MSE horizon d=3: 1.138082e-03
+  MSE horizon d=4: 1.490424e-03
+  MSE horizon d=5: 1.792385e-03
+
+============================================================
+>>> Part 1b | returns | GRU
+============================================================
+Task: returns | Model: gru | Device: cpu
+[data] train:   3372 windows
+[data] val  :    246 windows
+[data] test :    675 windows
+StockGRU(
+  (gru): GRU(5, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=64, out_features=5, bias=True)
+)
+    [50/53] loss: 0.002366
+Epoch   1/50 | train 0.002313 | val 0.000657  <- saved
+    [50/53] loss: 0.001301
+Epoch   2/50 | train 0.001290 | val 0.000648  <- saved
+    [50/53] loss: 0.001163
+Epoch   3/50 | train 0.001170 | val 0.000641  <- saved
+    [50/53] loss: 0.001130
+Epoch   4/50 | train 0.001135 | val 0.000652
+    [50/53] loss: 0.001112
+Epoch   5/50 | train 0.001106 | val 0.000640  <- saved
+    [50/53] loss: 0.001087
+Epoch   6/50 | train 0.001087 | val 0.000675
+    [50/53] loss: 0.001075
+Epoch   7/50 | train 0.001079 | val 0.000638  <- saved
+    [50/53] loss: 0.001069
+Epoch   8/50 | train 0.001066 | val 0.000647
+    [50/53] loss: 0.001072
+Epoch   9/50 | train 0.001065 | val 0.000631  <- saved
+    [50/53] loss: 0.001055
+Epoch  10/50 | train 0.001060 | val 0.000655
+    [50/53] loss: 0.001046
+Epoch  11/50 | train 0.001056 | val 0.000631
+    [50/53] loss: 0.001048
+Epoch  12/50 | train 0.001049 | val 0.000654
+    [50/53] loss: 0.001060
+Epoch  13/50 | train 0.001050 | val 0.000654
+    [50/53] loss: 0.001044
+Epoch  14/50 | train 0.001049 | val 0.000627  <- saved
+    [50/53] loss: 0.001036
+Epoch  15/50 | train 0.001046 | val 0.000623  <- saved
+    [50/53] loss: 0.001039
+Epoch  16/50 | train 0.001045 | val 0.000620  <- saved
+    [50/53] loss: 0.001036
+Epoch  17/50 | train 0.001043 | val 0.000633
+    [50/53] loss: 0.001038
+Epoch  18/50 | train 0.001044 | val 0.000636
+    [50/53] loss: 0.001051
+Epoch  19/50 | train 0.001044 | val 0.000626
+    [50/53] loss: 0.001043
+Epoch  20/50 | train 0.001042 | val 0.000623
+    [50/53] loss: 0.001041
+Epoch  21/50 | train 0.001044 | val 0.000622
+    [50/53] loss: 0.001038
+Epoch  22/50 | train 0.001041 | val 0.000618  <- saved
+    [50/53] loss: 0.001044
+Epoch  23/50 | train 0.001043 | val 0.000644
+    [50/53] loss: 0.001047
+Epoch  24/50 | train 0.001042 | val 0.000629
+    [50/53] loss: 0.001049
+Epoch  25/50 | train 0.001043 | val 0.000631
+    [50/53] loss: 0.001042
+Epoch  26/50 | train 0.001041 | val 0.000628
+    [50/53] loss: 0.001048
+Epoch  27/50 | train 0.001042 | val 0.000622
+    [50/53] loss: 0.001042
+Epoch  28/50 | train 0.001044 | val 0.000627
+    [50/53] loss: 0.001041
+Epoch  29/50 | train 0.001040 | val 0.000619
+    [50/53] loss: 0.001051
+Epoch  30/50 | train 0.001040 | val 0.000638
+    [50/53] loss: 0.001037
+Epoch  31/50 | train 0.001040 | val 0.000630
+    [50/53] loss: 0.001019
+Epoch  32/50 | train 0.001040 | val 0.000630
+    [50/53] loss: 0.001026
+Epoch  33/50 | train 0.001040 | val 0.000632
+    [50/53] loss: 0.001039
+Epoch  34/50 | train 0.001040 | val 0.000622
+    [50/53] loss: 0.001041
+Epoch  35/50 | train 0.001039 | val 0.000629
+    [50/53] loss: 0.001036
+Epoch  36/50 | train 0.001039 | val 0.000626
+    [50/53] loss: 0.001029
+Epoch  37/50 | train 0.001039 | val 0.000628
+    [50/53] loss: 0.001039
+Epoch  38/50 | train 0.001039 | val 0.000628
+    [50/53] loss: 0.001051
+Epoch  39/50 | train 0.001039 | val 0.000632
+    [50/53] loss: 0.001054
+Epoch  40/50 | train 0.001040 | val 0.000628
+    [50/53] loss: 0.001042
+Epoch  41/50 | train 0.001038 | val 0.000626
+    [50/53] loss: 0.001050
+Epoch  42/50 | train 0.001038 | val 0.000627
+    [50/53] loss: 0.001026
+Epoch  43/50 | train 0.001039 | val 0.000625
+    [50/53] loss: 0.001048
+Epoch  44/50 | train 0.001038 | val 0.000627
+    [50/53] loss: 0.001036
+Epoch  45/50 | train 0.001039 | val 0.000626
+    [50/53] loss: 0.001034
+Epoch  46/50 | train 0.001038 | val 0.000627
+    [50/53] loss: 0.001040
+Epoch  47/50 | train 0.001038 | val 0.000626
+    [50/53] loss: 0.001047
+Epoch  48/50 | train 0.001039 | val 0.000626
+    [50/53] loss: 0.001042
+Epoch  49/50 | train 0.001038 | val 0.000625
+    [50/53] loss: 0.001037
+Epoch  50/50 | train 0.001039 | val 0.000625
+
+Training complete. Best validation loss: 0.000618
+
+=== Test Results ===
+  task           : returns
+  overall MSE    : 1.098396e-03
+  overall MAE    : 2.273234e-02
+  MSE horizon d=1: 3.624120e-04
+  MSE horizon d=2: 7.111353e-04
+  MSE horizon d=3: 1.138549e-03
+  MSE horizon d=4: 1.490475e-03
+  MSE horizon d=5: 1.789407e-03
+
+============================================================
+>>> Part 1c | rolling (window=3) | LSTM
+============================================================
+Task: rolling | Model: lstm | Device: cpu
+[data] train:   3372 windows
+[data] val  :    246 windows
+[data] test :    675 windows
+StockLSTM(
+  (lstm): LSTM(5, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=64, out_features=5, bias=True)
+)
+    [50/53] loss: 0.002146
+Epoch   1/50 | train 0.002073 | val 0.000364  <- saved
+    [50/53] loss: 0.000784
+Epoch   2/50 | train 0.000779 | val 0.000368
+    [50/53] loss: 0.000717
+Epoch   3/50 | train 0.000712 | val 0.000354  <- saved
+    [50/53] loss: 0.000681
+Epoch   4/50 | train 0.000686 | val 0.000359
+    [50/53] loss: 0.000666
+Epoch   5/50 | train 0.000662 | val 0.000348  <- saved
+    [50/53] loss: 0.000647
+Epoch   6/50 | train 0.000648 | val 0.000347  <- saved
+    [50/53] loss: 0.000637
+Epoch   7/50 | train 0.000640 | val 0.000355
+    [50/53] loss: 0.000620
+Epoch   8/50 | train 0.000623 | val 0.000353
+    [50/53] loss: 0.000619
+Epoch   9/50 | train 0.000619 | val 0.000360
+    [50/53] loss: 0.000607
+Epoch  10/50 | train 0.000612 | val 0.000346  <- saved
+    [50/53] loss: 0.000613
+Epoch  11/50 | train 0.000613 | val 0.000354
+    [50/53] loss: 0.000595
+Epoch  12/50 | train 0.000607 | val 0.000350
+    [50/53] loss: 0.000594
+Epoch  13/50 | train 0.000597 | val 0.000349
+    [50/53] loss: 0.000601
+Epoch  14/50 | train 0.000596 | val 0.000347
+    [50/53] loss: 0.000594
+Epoch  15/50 | train 0.000593 | val 0.000347
+    [50/53] loss: 0.000594
+Epoch  16/50 | train 0.000594 | val 0.000353
+    [50/53] loss: 0.000585
+Epoch  17/50 | train 0.000588 | val 0.000348
+    [50/53] loss: 0.000583
+Epoch  18/50 | train 0.000586 | val 0.000346  <- saved
+    [50/53] loss: 0.000583
+Epoch  19/50 | train 0.000586 | val 0.000346
+    [50/53] loss: 0.000584
+Epoch  20/50 | train 0.000585 | val 0.000345  <- saved
+    [50/53] loss: 0.000582
+Epoch  21/50 | train 0.000586 | val 0.000358
+    [50/53] loss: 0.000583
+Epoch  22/50 | train 0.000583 | val 0.000345
+    [50/53] loss: 0.000585
+Epoch  23/50 | train 0.000585 | val 0.000351
+    [50/53] loss: 0.000587
+Epoch  24/50 | train 0.000582 | val 0.000350
+    [50/53] loss: 0.000573
+Epoch  25/50 | train 0.000580 | val 0.000344  <- saved
+    [50/53] loss: 0.000579
+Epoch  26/50 | train 0.000582 | val 0.000347
+    [50/53] loss: 0.000580
+Epoch  27/50 | train 0.000583 | val 0.000345
+    [50/53] loss: 0.000582
+Epoch  28/50 | train 0.000580 | val 0.000345
+    [50/53] loss: 0.000576
+Epoch  29/50 | train 0.000579 | val 0.000347
+    [50/53] loss: 0.000581
+Epoch  30/50 | train 0.000579 | val 0.000349
+    [50/53] loss: 0.000581
+Epoch  31/50 | train 0.000579 | val 0.000346
+    [50/53] loss: 0.000581
+Epoch  32/50 | train 0.000580 | val 0.000349
+    [50/53] loss: 0.000579
+Epoch  33/50 | train 0.000579 | val 0.000347
+    [50/53] loss: 0.000582
+Epoch  34/50 | train 0.000579 | val 0.000347
+    [50/53] loss: 0.000580
+Epoch  35/50 | train 0.000578 | val 0.000349
+    [50/53] loss: 0.000581
+Epoch  36/50 | train 0.000578 | val 0.000346
+    [50/53] loss: 0.000576
+Epoch  37/50 | train 0.000578 | val 0.000350
+    [50/53] loss: 0.000577
+Epoch  38/50 | train 0.000576 | val 0.000346
+    [50/53] loss: 0.000576
+Epoch  39/50 | train 0.000577 | val 0.000346
+    [50/53] loss: 0.000569
+Epoch  40/50 | train 0.000577 | val 0.000348
+    [50/53] loss: 0.000581
+Epoch  41/50 | train 0.000577 | val 0.000346
+    [50/53] loss: 0.000575
+Epoch  42/50 | train 0.000576 | val 0.000348
+    [50/53] loss: 0.000577
+Epoch  43/50 | train 0.000577 | val 0.000349
+    [50/53] loss: 0.000576
+Epoch  44/50 | train 0.000577 | val 0.000347
+    [50/53] loss: 0.000577
+Epoch  45/50 | train 0.000576 | val 0.000347
+    [50/53] loss: 0.000577
+Epoch  46/50 | train 0.000576 | val 0.000346
+    [50/53] loss: 0.000580
+Epoch  47/50 | train 0.000576 | val 0.000347
+    [50/53] loss: 0.000571
+Epoch  48/50 | train 0.000577 | val 0.000347
+    [50/53] loss: 0.000574
+Epoch  49/50 | train 0.000577 | val 0.000347
+    [50/53] loss: 0.000578
+Epoch  50/50 | train 0.000576 | val 0.000347
+
+Training complete. Best validation loss: 0.000344
+
+=== Test Results ===
+  task           : rolling
+  overall MSE    : 6.144910e-04
+  overall MAE    : 1.615013e-02
+  MSE horizon d=1: 9.054031e-05
+  MSE horizon d=2: 2.330735e-04
+  MSE horizon d=3: 5.470465e-04
+  MSE horizon d=4: 9.253281e-04
+  MSE horizon d=5: 1.276467e-03
+
+============================================================
+>>> Part 1c | rolling (window=3) | GRU
+============================================================
+Task: rolling | Model: gru | Device: cpu
+[data] train:   3372 windows
+[data] val  :    246 windows
+[data] test :    675 windows
+StockGRU(
+  (gru): GRU(5, 64, num_layers=2, batch_first=True, dropout=0.2)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=64, out_features=5, bias=True)
+)
+    [50/53] loss: 0.001881
+Epoch   1/50 | train 0.001828 | val 0.000373  <- saved
+    [50/53] loss: 0.000819
+Epoch   2/50 | train 0.000812 | val 0.000360  <- saved
+    [50/53] loss: 0.000696
+Epoch   3/50 | train 0.000700 | val 0.000357  <- saved
+    [50/53] loss: 0.000656
+Epoch   4/50 | train 0.000659 | val 0.000360
+    [50/53] loss: 0.000636
+Epoch   5/50 | train 0.000633 | val 0.000354  <- saved
+    [50/53] loss: 0.000614
+Epoch   6/50 | train 0.000615 | val 0.000371
+    [50/53] loss: 0.000605
+Epoch   7/50 | train 0.000607 | val 0.000354  <- saved
+    [50/53] loss: 0.000600
+Epoch   8/50 | train 0.000598 | val 0.000360
+    [50/53] loss: 0.000597
+Epoch   9/50 | train 0.000593 | val 0.000350  <- saved
+    [50/53] loss: 0.000584
+Epoch  10/50 | train 0.000590 | val 0.000363
+    [50/53] loss: 0.000578
+Epoch  11/50 | train 0.000586 | val 0.000349  <- saved
+    [50/53] loss: 0.000581
+Epoch  12/50 | train 0.000582 | val 0.000363
+    [50/53] loss: 0.000588
+Epoch  13/50 | train 0.000581 | val 0.000365
+    [50/53] loss: 0.000577
+Epoch  14/50 | train 0.000580 | val 0.000348  <- saved
+    [50/53] loss: 0.000572
+Epoch  15/50 | train 0.000578 | val 0.000345  <- saved
+    [50/53] loss: 0.000574
+Epoch  16/50 | train 0.000578 | val 0.000344  <- saved
+    [50/53] loss: 0.000572
+Epoch  17/50 | train 0.000577 | val 0.000351
+    [50/53] loss: 0.000573
+Epoch  18/50 | train 0.000577 | val 0.000354
+    [50/53] loss: 0.000582
+Epoch  19/50 | train 0.000577 | val 0.000347
+    [50/53] loss: 0.000575
+Epoch  20/50 | train 0.000576 | val 0.000345
+    [50/53] loss: 0.000574
+Epoch  21/50 | train 0.000576 | val 0.000345
+    [50/53] loss: 0.000573
+Epoch  22/50 | train 0.000575 | val 0.000342  <- saved
+    [50/53] loss: 0.000578
+Epoch  23/50 | train 0.000576 | val 0.000356
+    [50/53] loss: 0.000578
+Epoch  24/50 | train 0.000576 | val 0.000349
+    [50/53] loss: 0.000580
+Epoch  25/50 | train 0.000576 | val 0.000351
+    [50/53] loss: 0.000576
+Epoch  26/50 | train 0.000575 | val 0.000349
+    [50/53] loss: 0.000579
+Epoch  27/50 | train 0.000576 | val 0.000344
+    [50/53] loss: 0.000575
+Epoch  28/50 | train 0.000576 | val 0.000349
+    [50/53] loss: 0.000576
+Epoch  29/50 | train 0.000574 | val 0.000343
+    [50/53] loss: 0.000580
+Epoch  30/50 | train 0.000574 | val 0.000355
+    [50/53] loss: 0.000573
+Epoch  31/50 | train 0.000574 | val 0.000350
+    [50/53] loss: 0.000562
+Epoch  32/50 | train 0.000574 | val 0.000349
+    [50/53] loss: 0.000566
+Epoch  33/50 | train 0.000574 | val 0.000352
+    [50/53] loss: 0.000573
+Epoch  34/50 | train 0.000574 | val 0.000345
+    [50/53] loss: 0.000575
+Epoch  35/50 | train 0.000574 | val 0.000349
+    [50/53] loss: 0.000571
+Epoch  36/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000567
+Epoch  37/50 | train 0.000573 | val 0.000348
+    [50/53] loss: 0.000574
+Epoch  38/50 | train 0.000573 | val 0.000348
+    [50/53] loss: 0.000581
+Epoch  39/50 | train 0.000574 | val 0.000351
+    [50/53] loss: 0.000582
+Epoch  40/50 | train 0.000574 | val 0.000348
+    [50/53] loss: 0.000573
+Epoch  41/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000581
+Epoch  42/50 | train 0.000573 | val 0.000348
+    [50/53] loss: 0.000567
+Epoch  43/50 | train 0.000574 | val 0.000346
+    [50/53] loss: 0.000579
+Epoch  44/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000572
+Epoch  45/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000571
+Epoch  46/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000575
+Epoch  47/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000578
+Epoch  48/50 | train 0.000573 | val 0.000347
+    [50/53] loss: 0.000574
+Epoch  49/50 | train 0.000573 | val 0.000346
+    [50/53] loss: 0.000572
+Epoch  50/50 | train 0.000573 | val 0.000346
+
+Training complete. Best validation loss: 0.000342
+
+=== Test Results ===
+  task           : rolling
+  overall MSE    : 6.136001e-04
+  overall MAE    : 1.615262e-02
+  MSE horizon d=1: 9.046270e-05
+  MSE horizon d=2: 2.328680e-04
+  MSE horizon d=3: 5.466948e-04
+  MSE horizon d=4: 9.244303e-04
+  MSE horizon d=5: 1.273545e-03
+
+============================================================
+>>> Part 1d | turning (gamma=1.1) | LSTM
+============================================================
+Task: turning | Model: lstm | Device: cpu
+[data] train:   3372 windows
+[data] val  :    246 windows
+[data] test :    675 windows
+TurningPointDetector(
+  (rnn): LSTM(5, 64, num_layers=2, batch_first=True, dropout=0.2, bidirectional=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=128, out_features=1, bias=True)
+)
+[train] BCE pos_weight = 28.84
+    [50/53] loss: 1.196015
+Epoch   1/50 | train 1.257159 | val 1.061217  <- saved
+    [50/53] loss: 1.202502
+Epoch   2/50 | train 1.224632 | val 0.968266  <- saved
+    [50/53] loss: 1.207409
+Epoch   3/50 | train 1.213724 | val 0.993556
+    [50/53] loss: 1.185314
+Epoch   4/50 | train 1.210800 | val 1.007426
+    [50/53] loss: 1.208459
+Epoch   5/50 | train 1.194901 | val 0.997822
+    [50/53] loss: 1.207867
+Epoch   6/50 | train 1.196935 | val 0.983740
+    [50/53] loss: 1.195326
+Epoch   7/50 | train 1.198898 | val 1.008881
+    [50/53] loss: 1.199894
+Epoch   8/50 | train 1.192011 | val 1.012673
+    [50/53] loss: 1.176772
+Epoch   9/50 | train 1.190250 | val 1.020145
+    [50/53] loss: 1.192461
+Epoch  10/50 | train 1.190631 | val 1.003803
+    [50/53] loss: 1.207566
+Epoch  11/50 | train 1.192733 | val 1.008384
+    [50/53] loss: 1.177826
+Epoch  12/50 | train 1.188073 | val 1.019696
+    [50/53] loss: 1.194326
+Epoch  13/50 | train 1.192766 | val 1.005949
+    [50/53] loss: 1.187038
+Epoch  14/50 | train 1.193690 | val 1.001164
+    [50/53] loss: 1.166262
+Epoch  15/50 | train 1.181339 | val 1.004671
+    [50/53] loss: 1.206746
+Epoch  16/50 | train 1.182648 | val 1.006981
+    [50/53] loss: 1.173713
+Epoch  17/50 | train 1.182958 | val 1.009663
+    [50/53] loss: 1.177766
+Epoch  18/50 | train 1.190264 | val 1.005423
+    [50/53] loss: 1.205601
+Epoch  19/50 | train 1.181361 | val 1.012524
+    [50/53] loss: 1.182826
+Epoch  20/50 | train 1.183666 | val 1.008155
+    [50/53] loss: 1.201898
+Epoch  21/50 | train 1.181551 | val 1.006508
+    [50/53] loss: 1.185089
+Epoch  22/50 | train 1.180564 | val 1.012186
+    [50/53] loss: 1.189836
+Epoch  23/50 | train 1.177302 | val 1.010581
+    [50/53] loss: 1.188521
+Epoch  24/50 | train 1.181167 | val 1.011311
+    [50/53] loss: 1.186499
+Epoch  25/50 | train 1.180487 | val 1.012441
+    [50/53] loss: 1.184008
+Epoch  26/50 | train 1.180619 | val 1.011669
+    [50/53] loss: 1.171939
+Epoch  27/50 | train 1.177612 | val 1.012119
+    [50/53] loss: 1.180884
+Epoch  28/50 | train 1.179961 | val 1.012070
+    [50/53] loss: 1.199939
+Epoch  29/50 | train 1.180050 | val 1.011656
+    [50/53] loss: 1.173293
+Epoch  30/50 | train 1.176102 | val 1.012274
+    [50/53] loss: 1.194738
+Epoch  31/50 | train 1.182014 | val 1.010416
+    [50/53] loss: 1.189680
+Epoch  32/50 | train 1.181579 | val 1.011872
+    [50/53] loss: 1.181214
+Epoch  33/50 | train 1.173841 | val 1.012418
+    [50/53] loss: 1.165111
+Epoch  34/50 | train 1.179761 | val 1.012860
+    [50/53] loss: 1.184867
+Epoch  35/50 | train 1.174327 | val 1.012228
+    [50/53] loss: 1.165670
+Epoch  36/50 | train 1.172079 | val 1.011939
+    [50/53] loss: 1.168187
+Epoch  37/50 | train 1.175989 | val 1.011466
+    [50/53] loss: 1.185167
+Epoch  38/50 | train 1.173476 | val 1.011959
+    [50/53] loss: 1.181611
+Epoch  39/50 | train 1.174927 | val 1.012113
+    [50/53] loss: 1.169944
+Epoch  40/50 | train 1.171704 | val 1.012254
+    [50/53] loss: 1.157093
+Epoch  41/50 | train 1.173316 | val 1.012538
+    [50/53] loss: 1.193948
+Epoch  42/50 | train 1.176871 | val 1.012381
+    [50/53] loss: 1.196096
+Epoch  43/50 | train 1.174891 | val 1.012044
+    [50/53] loss: 1.187356
+Epoch  44/50 | train 1.176944 | val 1.012466
+    [50/53] loss: 1.177376
+Epoch  45/50 | train 1.171615 | val 1.012360
+    [50/53] loss: 1.182909
+Epoch  46/50 | train 1.174334 | val 1.012216
+    [50/53] loss: 1.165754
+Epoch  47/50 | train 1.178104 | val 1.012531
+    [50/53] loss: 1.179640
+Epoch  48/50 | train 1.173752 | val 1.012190
+    [50/53] loss: 1.192538
+Epoch  49/50 | train 1.170968 | val 1.012126
+    [50/53] loss: 1.160335
+Epoch  50/50 | train 1.175662 | val 1.012169
+
+Training complete. Best validation loss: 0.968266
+
+=== Test Results ===
+  task           : turning-point (gamma=1.1)
+  positive rate  : 0.0459
+  accuracy       : 0.9437
+  precision      : 0.2308
+  recall         : 0.0968
+  f1             : 0.1364
+
+============================================================
+>>> Part 1d | turning (gamma=1.1) | GRU
+============================================================
+Task: turning | Model: gru | Device: cpu
+[data] train:   3372 windows
+[data] val  :    246 windows
+[data] test :    675 windows
+TurningPointDetector(
+  (rnn): GRU(5, 64, num_layers=2, batch_first=True, dropout=0.2, bidirectional=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (fc): Linear(in_features=128, out_features=1, bias=True)
+)
+[train] BCE pos_weight = 28.84
+    [50/53] loss: 1.265442
+Epoch   1/50 | train 1.250951 | val 1.019851  <- saved
+    [50/53] loss: 1.218174
+Epoch   2/50 | train 1.208677 | val 0.995181  <- saved
+    [50/53] loss: 1.218830
+Epoch   3/50 | train 1.198747 | val 0.968939  <- saved
+    [50/53] loss: 1.189320
+Epoch   4/50 | train 1.192387 | val 0.988844
+    [50/53] loss: 1.226160
+Epoch   5/50 | train 1.212082 | val 0.975146
+    [50/53] loss: 1.196694
+Epoch   6/50 | train 1.192063 | val 0.989639
+    [50/53] loss: 1.199128
+Epoch   7/50 | train 1.195312 | val 1.005644
+    [50/53] loss: 1.160384
+Epoch   8/50 | train 1.201305 | val 0.995751
+    [50/53] loss: 1.191065
+Epoch   9/50 | train 1.197274 | val 0.978921
+    [50/53] loss: 1.181659
+Epoch  10/50 | train 1.189234 | val 0.983981
+    [50/53] loss: 1.171679
+Epoch  11/50 | train 1.189303 | val 0.988733
+    [50/53] loss: 1.204143
+Epoch  12/50 | train 1.195242 | val 0.996071
+    [50/53] loss: 1.189519
+Epoch  13/50 | train 1.194056 | val 0.995174
+    [50/53] loss: 1.181289
+Epoch  14/50 | train 1.189972 | val 0.981122
+    [50/53] loss: 1.165595
+Epoch  15/50 | train 1.188990 | val 0.994918
+    [50/53] loss: 1.208616
+Epoch  16/50 | train 1.188729 | val 0.989956
+    [50/53] loss: 1.183976
+Epoch  17/50 | train 1.186390 | val 0.986570
+    [50/53] loss: 1.201590
+Epoch  18/50 | train 1.183363 | val 0.988344
+    [50/53] loss: 1.194525
+Epoch  19/50 | train 1.188104 | val 0.999099
+    [50/53] loss: 1.174163
+Epoch  20/50 | train 1.181395 | val 0.998870
+    [50/53] loss: 1.180387
+Epoch  21/50 | train 1.182905 | val 0.994304
+    [50/53] loss: 1.177529
+Epoch  22/50 | train 1.176023 | val 0.989839
+    [50/53] loss: 1.169351
+Epoch  23/50 | train 1.178682 | val 0.992227
+    [50/53] loss: 1.180760
+Epoch  24/50 | train 1.185297 | val 0.995814
+    [50/53] loss: 1.167067
+Epoch  25/50 | train 1.186331 | val 0.999406
+    [50/53] loss: 1.169691
+Epoch  26/50 | train 1.182987 | val 0.997326
+    [50/53] loss: 1.170680
+Epoch  27/50 | train 1.179692 | val 0.994510
+    [50/53] loss: 1.191162
+Epoch  28/50 | train 1.183569 | val 0.992036
+    [50/53] loss: 1.196644
+Epoch  29/50 | train 1.181945 | val 0.992479
+    [50/53] loss: 1.195280
+Epoch  30/50 | train 1.182407 | val 0.993725
+    [50/53] loss: 1.178651
+Epoch  31/50 | train 1.176374 | val 0.995060
+    [50/53] loss: 1.195048
+Epoch  32/50 | train 1.185148 | val 0.994725
+    [50/53] loss: 1.164299
+Epoch  33/50 | train 1.184411 | val 0.996658
+    [50/53] loss: 1.171950
+Epoch  34/50 | train 1.185572 | val 0.996392
+    [50/53] loss: 1.175313
+Epoch  35/50 | train 1.180365 | val 0.995696
+    [50/53] loss: 1.203684
+Epoch  36/50 | train 1.181667 | val 0.996016
+    [50/53] loss: 1.197015
+Epoch  37/50 | train 1.182843 | val 0.996114
+    [50/53] loss: 1.184313
+Epoch  38/50 | train 1.182399 | val 0.996345
+    [50/53] loss: 1.175251
+Epoch  39/50 | train 1.181185 | val 0.993993
+    [50/53] loss: 1.197957
+Epoch  40/50 | train 1.177611 | val 0.995131
+    [50/53] loss: 1.196726
+Epoch  41/50 | train 1.187662 | val 0.996202
+    [50/53] loss: 1.200763
+Epoch  42/50 | train 1.183000 | val 0.995846
+    [50/53] loss: 1.196044
+Epoch  43/50 | train 1.181757 | val 0.996600
+    [50/53] loss: 1.167661
+Epoch  44/50 | train 1.184186 | val 0.996984
+    [50/53] loss: 1.164053
+Epoch  45/50 | train 1.172990 | val 0.996988
+    [50/53] loss: 1.192916
+Epoch  46/50 | train 1.186801 | val 0.996694
+    [50/53] loss: 1.161335
+Epoch  47/50 | train 1.183738 | val 0.997113
+    [50/53] loss: 1.169320
+Epoch  48/50 | train 1.176738 | val 0.996663
+    [50/53] loss: 1.178571
+Epoch  49/50 | train 1.187263 | val 0.996751
+    [50/53] loss: 1.166748
+Epoch  50/50 | train 1.180293 | val 0.996834
+
+Training complete. Best validation loss: 0.968939
+
+=== Test Results ===
+  task           : turning-point (gamma=1.1)
+  positive rate  : 0.0459
+  accuracy       : 0.9541
+  precision      : 0.5000
+  recall         : 0.0645
+  f1             : 0.1143
+
+============================================================
+>>> Part 2 | rounds=4 sigma^2=0.25 (capacity-limited floor)
+============================================================
+Part 2 | rounds=4 sigma^2=0.25 device=cpu
+step   600 | loss 0.6840 | SER 0.3250 | BLER 0.8039
+step  1200 | loss 0.7092 | SER 0.3314 | BLER 0.8035
+step  1800 | loss 0.8056 | SER 0.3243 | BLER 0.7961
+step  2400 | loss 0.7434 | SER 0.3268 | BLER 0.7957
+step  3000 | loss 0.7218 | SER 0.3175 | BLER 0.7836
+step  3600 | loss 0.6716 | SER 0.3229 | BLER 0.7992
+step  4200 | loss 0.7138 | SER 0.3225 | BLER 0.7930
+step  4800 | loss 0.6892 | SER 0.3204 | BLER 0.7852
+step  5400 | loss 0.7144 | SER 0.3215 | BLER 0.7914
+step  6000 | loss 0.7924 | SER 0.3215 | BLER 0.7871
+
+Final  SER 0.3136 | BLER 0.7784
+
+============================================================
+>>> Part 2 sweep | rounds=1 sigma^2=0.25
+============================================================
+Part 2 | rounds=1 sigma^2=0.25 device=cpu
+step   200 | loss 1.7101 | SER 0.7145 | BLER 0.9938
+step   400 | loss 1.7418 | SER 0.7063 | BLER 0.9965
+step   600 | loss 1.7159 | SER 0.7037 | BLER 0.9895
+step   800 | loss 1.7321 | SER 0.7018 | BLER 0.9922
+step  1000 | loss 1.7206 | SER 0.6970 | BLER 0.9883
+step  1200 | loss 1.7200 | SER 0.7061 | BLER 0.9918
+step  1400 | loss 1.7402 | SER 0.7004 | BLER 0.9898
+step  1600 | loss 1.7381 | SER 0.6970 | BLER 0.9930
+step  1800 | loss 1.7519 | SER 0.7081 | BLER 0.9914
+step  2000 | loss 1.7211 | SER 0.7036 | BLER 0.9941
+
+Final  SER 0.7093 | BLER 0.9935
+
+============================================================
+>>> Part 2 sweep | rounds=2 sigma^2=0.25
+============================================================
+Part 2 | rounds=2 sigma^2=0.25 device=cpu
+step   200 | loss 1.4416 | SER 0.6188 | BLER 0.9797
+step   400 | loss 1.3552 | SER 0.6114 | BLER 0.9809
+step   600 | loss 1.3670 | SER 0.5938 | BLER 0.9691
+step   800 | loss 1.3948 | SER 0.5891 | BLER 0.9730
+step  1000 | loss 1.3740 | SER 0.6051 | BLER 0.9742
+step  1200 | loss 1.3802 | SER 0.5973 | BLER 0.9723
+step  1400 | loss 1.3763 | SER 0.5880 | BLER 0.9727
+step  1600 | loss 1.3747 | SER 0.5963 | BLER 0.9770
+step  1800 | loss 1.4271 | SER 0.5986 | BLER 0.9770
+step  2000 | loss 1.3958 | SER 0.5927 | BLER 0.9715
+
+Final  SER 0.5947 | BLER 0.9754
+
+============================================================
+>>> Part 2 sweep | rounds=8 sigma^2=0.25
+============================================================
+Part 2 | rounds=8 sigma^2=0.25 device=cpu
+step   200 | loss 0.4856 | SER 0.1378 | BLER 0.4582
+step   400 | loss 0.0347 | SER 0.0104 | BLER 0.0414
+step   600 | loss 0.0193 | SER 0.0022 | BLER 0.0090
+step   800 | loss 0.0087 | SER 0.0038 | BLER 0.0148
+step  1000 | loss 0.0308 | SER 0.0018 | BLER 0.0070
+step  1200 | loss 0.0214 | SER 0.0020 | BLER 0.0078
+step  1400 | loss 0.0113 | SER 0.0009 | BLER 0.0035
+step  1600 | loss 0.0067 | SER 0.0013 | BLER 0.0051
+step  1800 | loss 0.0016 | SER 0.0006 | BLER 0.0023
+step  2000 | loss 0.0030 | SER 0.0007 | BLER 0.0027
+
+Final  SER 0.0004 | BLER 0.0018
+
+============================================================
+>>> ALL DONE
+============================================================
+Finished — Sun Jun  7 12:33:52 +03 2026
+Full transcript saved to: results_20260607_121721.log
